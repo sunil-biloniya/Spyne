@@ -6,16 +6,17 @@
 //
 
 import Foundation
+import UIKit
 
 extension UIView {
-    func makeToast(_ message: String, color: UIColor = UIColor.appButtonBgColor) {
+    func makeToast(_ message: String, color: UIColor = UIColor.black) {
         let containerView = UIView()
         //            containerView.backgroundColor = color.withAlphaComponent(0.6)
         containerView.backgroundColor = color
         containerView.alpha = 0
         containerView.layer.cornerRadius = 5
         containerView.clipsToBounds = true
-        containerView.layer.borderWidth = 1
+//        containerView.layer.borderWidth = 1
         if #available(iOS 13.0, *) {
             containerView.layer.borderColor = CGColor(red: 255/255, green: 150/255, blue: 0/255, alpha: 1)
         } else {

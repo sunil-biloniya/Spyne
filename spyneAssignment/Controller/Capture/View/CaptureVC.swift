@@ -83,6 +83,7 @@ class CaptureVC: UIViewController, AVCapturePhotoCaptureDelegate {
             print("Error capturing image: \(String(describing: error))")
             return
         }
+        self.view.makeToast("Image is stored in list")
         viewModel.saveImageToRealm(image: image)
     }
 

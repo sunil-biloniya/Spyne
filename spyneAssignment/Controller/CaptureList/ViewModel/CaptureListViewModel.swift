@@ -28,9 +28,9 @@ class CaptureListViewModel: NSObject, ObservableObject, URLSessionTaskDelegate {
         notificationToken = results.observe { [weak self] changes in
             switch changes {
             case .initial(let initialResults):
-                self?.images = Array(initialResults)
+                self?.images = Array(initialResults).reversed()
             case .update(let updatedResults, _, _, _):
-                self?.images = Array(updatedResults)
+                self?.images = Array(updatedResults).reversed()
             case .error(let error):
                 debugPrint("Error observing Realm changes: \(error)")
             }

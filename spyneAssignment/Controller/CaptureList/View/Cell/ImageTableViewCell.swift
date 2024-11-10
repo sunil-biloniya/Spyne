@@ -17,7 +17,8 @@ class ImageTableViewCell: UITableViewCell {
     @IBOutlet weak var imageCapture: UIImageView!
     @IBOutlet weak var lblProgess: UILabel!
     @IBOutlet weak var lblImageName: UILabel!
-    @IBOutlet weak var btnStatus: UIButton!
+    @IBOutlet weak var lblStatus: UILabel!
+    @IBOutlet weak var btnUpload: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,16 +39,20 @@ class ImageTableViewCell: UITableViewCell {
             guard let data = setData else {return}
             lblProgess.text = "Progress: \(data.uploadProgress)%"
             lblImageName.text = "Name: \(data.imageName)"
-            btnStatus.setTitle("Status: \(data.uploadStatus)", for: .normal)
+            lblStatus.text = "Status: \(data.uploadStatus)"
             switch data.uploadStatus {
             case "Failed":
-                btnStatus.setTitleColor(.red, for: .normal)
+                lblStatus.textColor = .red
+                btnUpload.isHidden = false
             case "Pending":
-                btnStatus.setTitleColor(.lightGray, for: .normal)
+                lblStatus.textColor = .lightGray
+                btnUpload.isHidden = false
             case "Uploading":
-                btnStatus.setTitleColor(.systemBlue, for: .normal)
+                lblStatus.textColor = .systemBlue
+                btnUpload.isHidden = true
             case "Completed":
-                btnStatus.setTitleColor(.green, for: .normal)
+                lblStatus.textColor = .green
+                btnUpload.isHidden = true
             default:
                 break
             }
