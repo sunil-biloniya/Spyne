@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15DA94BA57FCD6F3EE0A6D2B /* Pods_spyneAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A6D3BAF9298EF3A0F3F735 /* Pods_spyneAssignment.framework */; };
+		CB3D69A62CDF146200DA9AE7 /* CaptureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3D69A52CDF146200DA9AE7 /* CaptureVC.swift */; };
+		CB3D69A92CDF1F4300DA9AE7 /* CaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3D69A82CDF1F4200DA9AE7 /* CaptureViewModel.swift */; };
+		CB3D69AD2CDF36CA00DA9AE7 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3D69AB2CDF36CA00DA9AE7 /* ImageTableViewCell.swift */; };
+		CB3D69AE2CDF36CA00DA9AE7 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB3D69AC2CDF36CA00DA9AE7 /* ImageTableViewCell.xib */; };
+		CBB36E022CDE4403000BB9C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB36E012CDE4403000BB9C8 /* AppDelegate.swift */; };
+		CBB36E042CDE4403000BB9C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB36E032CDE4403000BB9C8 /* SceneDelegate.swift */; };
+		CBB36E092CDE4403000BB9C8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CBB36E082CDE4403000BB9C8 /* Base */; };
+		CBB36E0B2CDE4404000BB9C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB36E0A2CDE4404000BB9C8 /* Assets.xcassets */; };
+		CBB36E0E2CDE4404000BB9C8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CBB36E0D2CDE4404000BB9C8 /* Base */; };
+		CBB36E1D2CDE4AEB000BB9C8 /* CaptureListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB36E1C2CDE4AEB000BB9C8 /* CaptureListVC.swift */; };
+		CBB36E4C2CDE5D0A000BB9C8 /* CapturedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB36E4B2CDE5D0A000BB9C8 /* CapturedImage.swift */; };
+		CBB36E4E2CDE5D87000BB9C8 /* CaptureListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB36E4D2CDE5D87000BB9C8 /* CaptureListViewModel.swift */; };
+		CBC5E9D82CE078D70084D875 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5E9D72CE078D70084D875 /* UITableView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CBB36E452CDE59CE000BB9C8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		33A6D3BAF9298EF3A0F3F735 /* Pods_spyneAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spyneAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		665FC4E351933354AF22435C /* Pods-spyneAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spyneAssignment.debug.xcconfig"; path = "Target Support Files/Pods-spyneAssignment/Pods-spyneAssignment.debug.xcconfig"; sourceTree = "<group>"; };
+		CB3D69A52CDF146200DA9AE7 /* CaptureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureVC.swift; sourceTree = "<group>"; };
+		CB3D69A82CDF1F4200DA9AE7 /* CaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewModel.swift; sourceTree = "<group>"; };
+		CB3D69AB2CDF36CA00DA9AE7 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		CB3D69AC2CDF36CA00DA9AE7 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		CBB36DFE2CDE4403000BB9C8 /* spyneAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spyneAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB36E012CDE4403000BB9C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBB36E032CDE4403000BB9C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CBB36E082CDE4403000BB9C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBB36E0A2CDE4404000BB9C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBB36E0D2CDE4404000BB9C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CBB36E0F2CDE4404000BB9C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBB36E1C2CDE4AEB000BB9C8 /* CaptureListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureListVC.swift; sourceTree = "<group>"; };
+		CBB36E4B2CDE5D0A000BB9C8 /* CapturedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturedImage.swift; sourceTree = "<group>"; };
+		CBB36E4D2CDE5D87000BB9C8 /* CaptureListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureListViewModel.swift; sourceTree = "<group>"; };
+		CBC5E9D72CE078D70084D875 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		EA1E3524AD0797B429891768 /* Pods-spyneAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spyneAssignment.release.xcconfig"; path = "Target Support Files/Pods-spyneAssignment/Pods-spyneAssignment.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBB36DFB2CDE4403000BB9C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15DA94BA57FCD6F3EE0A6D2B /* Pods_spyneAssignment.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FF7724684542FC2E06E1FAE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				665FC4E351933354AF22435C /* Pods-spyneAssignment.debug.xcconfig */,
+				EA1E3524AD0797B429891768 /* Pods-spyneAssignment.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CB3D69A32CDF123600DA9AE7 /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				CB3D69A72CDF1F2A00DA9AE7 /* ViewModel */,
+				CB3D69A42CDF144900DA9AE7 /* View */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
+		CB3D69A42CDF144900DA9AE7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB3D69A52CDF146200DA9AE7 /* CaptureVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB3D69A72CDF1F2A00DA9AE7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CB3D69A82CDF1F4200DA9AE7 /* CaptureViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CB3D69AA2CDF368800DA9AE7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CB3D69AB2CDF36CA00DA9AE7 /* ImageTableViewCell.swift */,
+				CB3D69AC2CDF36CA00DA9AE7 /* ImageTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CBB36DF52CDE4403000BB9C8 = {
+			isa = PBXGroup;
+			children = (
+				CBB36E002CDE4403000BB9C8 /* spyneAssignment */,
+				CBB36DFF2CDE4403000BB9C8 /* Products */,
+				CBB36E532CDE6B1D000BB9C8 /* Frameworks */,
+				0FF7724684542FC2E06E1FAE /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		CBB36DFF2CDE4403000BB9C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBB36DFE2CDE4403000BB9C8 /* spyneAssignment.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBB36E002CDE4403000BB9C8 /* spyneAssignment */ = {
+			isa = PBXGroup;
+			children = (
+				CBC5E9D62CE078BF0084D875 /* Extensions */,
+				CBB36E152CDE445C000BB9C8 /* AppDelegate */,
+				CBB36E162CDE4471000BB9C8 /* Controller */,
+				CBB36E072CDE4403000BB9C8 /* Main.storyboard */,
+				CBB36E0A2CDE4404000BB9C8 /* Assets.xcassets */,
+				CBB36E0C2CDE4404000BB9C8 /* LaunchScreen.storyboard */,
+				CBB36E0F2CDE4404000BB9C8 /* Info.plist */,
+			);
+			path = spyneAssignment;
+			sourceTree = "<group>";
+		};
+		CBB36E152CDE445C000BB9C8 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				CBB36E012CDE4403000BB9C8 /* AppDelegate.swift */,
+				CBB36E032CDE4403000BB9C8 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		CBB36E162CDE4471000BB9C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CB3D69A32CDF123600DA9AE7 /* Capture */,
+				CBB36E1E2CDE4AF0000BB9C8 /* CaptureList */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CBB36E1E2CDE4AF0000BB9C8 /* CaptureList */ = {
+			isa = PBXGroup;
+			children = (
+				CBB36E4A2CDE5CF1000BB9C8 /* Model */,
+				CBB36E202CDE4B0A000BB9C8 /* ViewModel */,
+				CBB36E1F2CDE4AFE000BB9C8 /* View */,
+			);
+			path = CaptureList;
+			sourceTree = "<group>";
+		};
+		CBB36E1F2CDE4AFE000BB9C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CBB36E1C2CDE4AEB000BB9C8 /* CaptureListVC.swift */,
+				CB3D69AA2CDF368800DA9AE7 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CBB36E202CDE4B0A000BB9C8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CBB36E4D2CDE5D87000BB9C8 /* CaptureListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CBB36E4A2CDE5CF1000BB9C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CBB36E4B2CDE5D0A000BB9C8 /* CapturedImage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CBB36E532CDE6B1D000BB9C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33A6D3BAF9298EF3A0F3F735 /* Pods_spyneAssignment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CBC5E9D62CE078BF0084D875 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CBC5E9D72CE078D70084D875 /* UITableView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBB36DFD2CDE4403000BB9C8 /* spyneAssignment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBB36E122CDE4404000BB9C8 /* Build configuration list for PBXNativeTarget "spyneAssignment" */;
+			buildPhases = (
+				082F7664B6475DB223A4130D /* [CP] Check Pods Manifest.lock */,
+				CBB36DFA2CDE4403000BB9C8 /* Sources */,
+				CBB36DFB2CDE4403000BB9C8 /* Frameworks */,
+				CBB36DFC2CDE4403000BB9C8 /* Resources */,
+				CBB36E452CDE59CE000BB9C8 /* Embed Frameworks */,
+				B2873E4E515E890F009E5B82 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = spyneAssignment;
+			packageProductDependencies = (
+			);
+			productName = spyneAssignment;
+			productReference = CBB36DFE2CDE4403000BB9C8 /* spyneAssignment.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBB36DF62CDE4403000BB9C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					CBB36DFD2CDE4403000BB9C8 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = CBB36DF92CDE4403000BB9C8 /* Build configuration list for PBXProject "spyneAssignment" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBB36DF52CDE4403000BB9C8;
+			packageReferences = (
+			);
+			productRefGroup = CBB36DFF2CDE4403000BB9C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBB36DFD2CDE4403000BB9C8 /* spyneAssignment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBB36DFC2CDE4403000BB9C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBB36E0B2CDE4404000BB9C8 /* Assets.xcassets in Resources */,
+				CB3D69AE2CDF36CA00DA9AE7 /* ImageTableViewCell.xib in Resources */,
+				CBB36E0E2CDE4404000BB9C8 /* Base in Resources */,
+				CBB36E092CDE4403000BB9C8 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		082F7664B6475DB223A4130D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-spyneAssignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2873E4E515E890F009E5B82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-spyneAssignment/Pods-spyneAssignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-spyneAssignment/Pods-spyneAssignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-spyneAssignment/Pods-spyneAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBB36DFA2CDE4403000BB9C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBC5E9D82CE078D70084D875 /* UITableView.swift in Sources */,
+				CBB36E4C2CDE5D0A000BB9C8 /* CapturedImage.swift in Sources */,
+				CB3D69A92CDF1F4300DA9AE7 /* CaptureViewModel.swift in Sources */,
+				CB3D69AD2CDF36CA00DA9AE7 /* ImageTableViewCell.swift in Sources */,
+				CBB36E022CDE4403000BB9C8 /* AppDelegate.swift in Sources */,
+				CBB36E042CDE4403000BB9C8 /* SceneDelegate.swift in Sources */,
+				CBB36E1D2CDE4AEB000BB9C8 /* CaptureListVC.swift in Sources */,
+				CB3D69A62CDF146200DA9AE7 /* CaptureVC.swift in Sources */,
+				CBB36E4E2CDE5D87000BB9C8 /* CaptureListViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CBB36E072CDE4403000BB9C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBB36E082CDE4403000BB9C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CBB36E0C2CDE4404000BB9C8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBB36E0D2CDE4404000BB9C8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBB36E102CDE4404000BB9C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CBB36E112CDE4404000BB9C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBB36E132CDE4404000BB9C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 665FC4E351933354AF22435C /* Pods-spyneAssignment.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P7R856DKT9;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = spyneAssignment/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Application wants to use your camera for profile uploading.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Application Need to access your gallery to pick a picture.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ios.spyneAssignment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CBB36E142CDE4404000BB9C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA1E3524AD0797B429891768 /* Pods-spyneAssignment.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P7R856DKT9;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = spyneAssignment/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Application wants to use your camera for profile uploading.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Application Need to access your gallery to pick a picture.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ios.spyneAssignment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBB36DF92CDE4403000BB9C8 /* Build configuration list for PBXProject "spyneAssignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBB36E102CDE4404000BB9C8 /* Debug */,
+				CBB36E112CDE4404000BB9C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBB36E122CDE4404000BB9C8 /* Build configuration list for PBXNativeTarget "spyneAssignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBB36E132CDE4404000BB9C8 /* Debug */,
+				CBB36E142CDE4404000BB9C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBB36DF62CDE4403000BB9C8 /* Project object */;
+}
