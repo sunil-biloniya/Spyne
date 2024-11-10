@@ -10,6 +10,7 @@ import RealmSwift
 import Combine
 
 class CaptureListViewModel: NSObject, ObservableObject, URLSessionTaskDelegate {
+    ///  Variables
     @Published var images: [CapturedImage] = []
     var realm = try! Realm()
     var progressHandler: ((CapturedImage) -> Void)?
@@ -21,6 +22,7 @@ class CaptureListViewModel: NSObject, ObservableObject, URLSessionTaskDelegate {
         fetchImages()
     }
     
+    ///  fetchImages captured images
     private func fetchImages() {
         let results = realm.objects(CapturedImage.self)
         notificationToken = results.observe { [weak self] changes in
@@ -38,7 +40,7 @@ class CaptureListViewModel: NSObject, ObservableObject, URLSessionTaskDelegate {
     deinit {
         notificationToken?.invalidate()
     }
-    
+    ///  Upload Image to server
     func uploadImage(_ image: CapturedImage, completion: @escaping (Bool) -> Void) {
         let parameters = [[
                 "key": "image",
@@ -112,7 +114,7 @@ class CaptureListViewModel: NSObject, ObservableObject, URLSessionTaskDelegate {
         }
     }
     
-    // URLSessionTaskDelegate method to track upload progress
+    /// URLSessionTaskDelegate method to track upload progress
     func urlSession(_ session: URLSession, task: URLSessionTask, didSendBodyData bytesSent: Int64, totalBytesSent: Int64, totalBytesExpectedToSend: Int64) {
         guard let image = taskToImageMap[task] else { return }
         let progress = Float(totalBytesSent) / Float(totalBytesExpectedToSend)
@@ -124,12 +126,7 @@ class CaptureListViewModel: NSObject, ObservableObject, URLSessionTaskDelegate {
             self.progressHandler?(image)
         }
     }
-    
-    private func getImageID(for task: URLSessionTask) -> String? {
-        // Logic to find the imageID for the current task, assuming imageID is passed somewhere in your request
-        return task.taskDescription
-    }
-    
+    /// set up complete task remote notification
     func scheduleUploadCompleteNotification() {
         let content = UNMutableNotificationContent()
         content.title = "Upload Complete"

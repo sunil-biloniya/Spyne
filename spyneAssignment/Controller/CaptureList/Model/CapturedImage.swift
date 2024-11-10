@@ -10,7 +10,7 @@ import RealmSwift
 import Realm
 import UIKit
 import CoreImage
-
+///  Capture Image Model
 class CapturedImage: Object {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var imageURI: String // URI where the image is saved locally

@@ -11,11 +11,14 @@ protocol UploadImageDelegate: AnyObject {
 }
 
 class ImageTableViewCell: UITableViewCell {
+    /// Variables
     static let identifier = "ImageTableViewCell"
+    /// IBOutlets
     @IBOutlet weak var imageCapture: UIImageView!
-    
     @IBOutlet weak var lblProgess: UILabel!
+    @IBOutlet weak var lblImageName: UILabel!
     @IBOutlet weak var btnStatus: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,12 +29,16 @@ class ImageTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
     weak var delegate: UploadImageDelegate?
+    
+    /// data set up
     var setData: CapturedImage? {
         didSet {
             guard let data = setData else {return}
-            lblProgess.text = String(data.uploadProgress) + "%"
-            btnStatus.setTitle(data.uploadStatus, for: .normal)
+            lblProgess.text = "Progress: \(data.uploadProgress)%"
+            lblImageName.text = "Name: \(data.imageName)"
+            btnStatus.setTitle("Status: \(data.uploadStatus)", for: .normal)
             switch data.uploadStatus {
             case "Failed":
                 btnStatus.setTitleColor(.red, for: .normal)
@@ -47,7 +54,7 @@ class ImageTableViewCell: UITableViewCell {
             imageCapture.image = UIImage(data: data.imageData)
         }
     }
-    
+    /// upload  status actions
     @IBAction func didTapStatus(_ sender: UIButton) {
         if let delegate = self.delegate{
             delegate.didTapUploadImage(for: self)

@@ -8,26 +8,9 @@
 import UIKit
 import AVFoundation
 import RealmSwift
-//class CaptureVC: UIViewController {
-//    private let viewModel = CaptureViewModel()
-//    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        viewModel.setupCaptureSession()
-//        // Do any additional setup after loading the view.
-//    }
-//    
-//    @IBAction func captureImageAction(_ sender: Any) {
-//        let settings = AVCapturePhotoSettings()
- //        photoOutput.capturePhoto(with: settings, delegate: self)
-//    }
-//}
-
-
-import UIKit
-import AVFoundation
 
 class CaptureVC: UIViewController, AVCapturePhotoCaptureDelegate {
+    /// set variables
     private var captureSession: AVCaptureSession!
     private var photoOutput: AVCapturePhotoOutput!
     private var previewLayer: AVCaptureVideoPreviewLayer!
@@ -44,7 +27,7 @@ class CaptureVC: UIViewController, AVCapturePhotoCaptureDelegate {
         setupRightBarButton()
     }
     
-    
+    /// set up right button
     func setupRightBarButton() {
         // Create a right bar button with the title "Capture"
         let captureButton = UIBarButtonItem(title: "Capture", style: .plain, target: self, action: #selector(capturePhoto))
@@ -58,9 +41,8 @@ class CaptureVC: UIViewController, AVCapturePhotoCaptureDelegate {
         } else {
             presentCameraSettings()
         }
-        
     }
-    
+    /// set up camera
     func setupCamera() {
         captureSession = AVCaptureSession()
         captureSession.sessionPreset = .photo
@@ -90,7 +72,7 @@ class CaptureVC: UIViewController, AVCapturePhotoCaptureDelegate {
         }
     }
     
-    // AVCapturePhotoCaptureDelegate method
+    /// AVCapturePhotoCaptureDelegate method
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         guard error == nil else {
             print("Error capturing photo: \(error!.localizedDescription)")
@@ -104,7 +86,7 @@ class CaptureVC: UIViewController, AVCapturePhotoCaptureDelegate {
         viewModel.saveImageToRealm(image: image)
     }
 
-    
+    /// Camera Access permission
     func presentCameraSettings() {
         let alertController = UIAlertController(title: "Camera Access",
                                                 message: "Camera access is denied, Please give access then continue.",
